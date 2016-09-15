@@ -1,0 +1,25 @@
+package com.example;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class FirstActivity extends Activity {
+	private Button myButton;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+		myButton = (Button) findViewById(R.id.myButton);
+		// myButton.setText("");
+		myButton.setOnClickListener(new ButtonOnClickListener());
+
+	}
+
+	class ButtonOnClickListener {
+
+	}
+
+}
