@@ -927,3 +927,9 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2016-09-15 21:05:21.705
+!MESSAGE Failed to load properties file for project 'Layout_02'
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2016-09-15 21:14:25.915
+!MESSAGE main.xml: Couldn't resolve resource @string/row1
