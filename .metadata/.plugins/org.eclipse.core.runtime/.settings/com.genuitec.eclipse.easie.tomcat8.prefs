@@ -1,0 +1,13 @@
+ENDORSED_DIRS="F\:\\apache-tomcat-8.0.32/common/endorsed"
+JDK_HOME=F\:\\Win 10\\MyEclipse Professional 2014\\binary\\com.sun.java.jdk7.win32.x86_64_1.7.0.u45
+LIBRARY_PATH="F\:\\Win 10\\MyEclipse Professional 2014\\binary\\com.sun.java.jdk7.win32.x86_64_1.7.0.u45\\bin;F\:\\apache-tomcat-8.0.32\\bin"
+SERVER_ENABLEMENT=true
+TOMCAT_BASE=F\:\\apache-tomcat-8.0.32
+TOMCAT_HOME=F\:\\apache-tomcat-8.0.32
+TOMCAT_TEMP=F\:\\apache-tomcat-8.0.32\\temp
+eclipse.preferences.version=1
+migration.configHash=3ec075109369d9ea67616a13886bf464; 9b5312327b851bf255d3fd843a7f43fc
+migration.performed.operation.easie.migrate.deployments=1.0
+migration.performed.operation.easie.tomcat.migrate.runtime=1.0
+migration.performed.operation.easie.tomcat.migrate.server=1.0
+migration.userInformed=3ec075109369d9ea67616a13886bf464

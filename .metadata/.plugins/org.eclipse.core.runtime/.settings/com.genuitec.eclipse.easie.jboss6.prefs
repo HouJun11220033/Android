@@ -1,0 +1,3 @@
+SERVER_HOME=server/default
+SERVER_STARTUP_ARG=-c default
+eclipse.preferences.version=1

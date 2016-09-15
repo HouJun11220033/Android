@@ -1,0 +1,7 @@
+ENDORSED_DIRS="F\:\\Win 10\\MyEclipse Professional 2014\\plugins\\com.genuitec.eclipse.easie.tomcat7.myeclipse_11.5.0.me201310302042\\tomcat/common/endorsed"
+JDK_HOME=F\:\\Win 10\\MyEclipse Professional 2014\\binary\\com.sun.java.jdk7.win32.x86_64_1.7.0.u45
+LIBRARY_PATH="F\:\\Win 10\\MyEclipse Professional 2014\\binary\\com.sun.java.jdk7.win32.x86_64_1.7.0.u45\\bin;F\:\\Win 10\\MyEclipse Professional 2014\\plugins\\com.genuitec.eclipse.easie.tomcat7.myeclipse_11.5.0.me201310302042\\tomcat\\bin"
+SERVER_ENABLEMENT=false
+eclipse.preferences.version=1
+migration.configHash=3ec075109369d9ea67616a13886bf464; 9b5312327b851bf255d3fd843a7f43fc
+tomcat.configuration.version.current=7
