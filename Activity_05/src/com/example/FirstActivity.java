@@ -23,42 +23,42 @@ public class FirstActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
-		System.out.println("FirstAcvity --->onDestory");
+		System.out.println("FirstActivity --->onDestory");
 		super.onDestroy();
 	}
 
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
-		System.out.println("FirstAcvity --->onPause");
+		System.out.println("FirstActivity --->onPause");
 		super.onPause();
 	}
 
 	@Override
 	protected void onRestart() {
 		// TODO Auto-generated method stub
-		System.out.println("FirstAcvity --->onRestart");
+		System.out.println("FirstActivity --->onRestart");
 		super.onRestart();
 	}
 
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
-		System.out.println("FirstAcvity --->onResume");
+		System.out.println("FirstActivity --->onResume");
 		super.onResume();
 	}
 
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
-		System.out.println("FirstAcvity --->onStart");
+		System.out.println("FirstActivity --->onStart");
 		super.onStart();
 	}
 
 	@Override
 	protected void onStop() {
 		// TODO Auto-generated method stub
-		System.out.println("FirstAcvity --->onStop");
+		System.out.println("FirstActivity --->onStop");
 		super.onStop();
 	}
 
