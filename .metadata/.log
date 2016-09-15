@@ -650,3 +650,9 @@ java.lang.IllegalArgumentException: Widget has the wrong parent
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2016-09-15 19:04:50.835
+!MESSAGE Failed to load properties file for project 'Activity_05'
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2016-09-15 19:06:12.032
+!MESSAGE second.xml: Couldn't resolve resource @string/second_button

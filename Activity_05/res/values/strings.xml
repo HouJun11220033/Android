@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Activity_05</string>
+    <string name="hello">Hello World, FirstActivity!</string>
+    <string name="first_button">启动第二个Activity</string>
+    <string name="second_button">回到第一个Activity</string>
+
+</resources>
