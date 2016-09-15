@@ -113,3 +113,6 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
 	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
 	... 13 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2016-09-15 09:53:27.066
+!MESSAGE Failed to load properties file for project 'Gittest'
