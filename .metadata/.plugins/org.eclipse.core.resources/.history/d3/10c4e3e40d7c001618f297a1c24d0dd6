@@ -30,7 +30,6 @@ public class MainActivity extends ListActivity {
 		list.add(map3);
 		MyAdapter listAdapter = new MyAdapter(this, list, R.layout.user,
 				new String[] { "user_name", "user_ip" }, new int[] { R.id.user_name, R.id.user_ip });
-
 		// Provide the cursor for the list view.
 		setListAdapter(listAdapter);
 
