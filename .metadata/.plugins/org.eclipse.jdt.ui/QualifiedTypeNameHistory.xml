@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="android.app.Activity"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
-<fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="com.example.R.layout"/>
 <fullyQualifiedTypeName name="android.widget.Gallery"/>
-<fullyQualifiedTypeName name="com.example.R.id"/>
 <fullyQualifiedTypeName name="com.example.SecondActivity"/>
 <fullyQualifiedTypeName name="com.example.FirstActivity"/>
+<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
+<fullyQualifiedTypeName name="android.widget.RadioButton"/>
+<fullyQualifiedTypeName name="android.widget.CheckBox"/>
+<fullyQualifiedTypeName name="com.example.MainActivity"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.widget.RadioGroup.OnCheckedChangeListener"/>
+<fullyQualifiedTypeName name="android.widget.CompoundButton.OnCheckedChangeListener"/>
+<fullyQualifiedTypeName name="android.widget.CompoundButton"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="android.app.ListActivity"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="android.widget.SimpleAdapter"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="com.example.R"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="com.example.MyAdapter"/>
+<fullyQualifiedTypeName name="com.example.R.layout"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="android.widget.ProgressBar"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.example.R.id"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.entity.EntitySerializer"/>
+<fullyQualifiedTypeName name="android.view.View"/>
 </qualifiedTypeNameHistroy>

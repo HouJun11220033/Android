@@ -3,6 +3,7 @@ Console.limitConsoleOutput=false
 Console.lowWaterMark=1000000
 Console.width=100
 Console.wrap=true
+DEBUG.consoleOpenOnOut=false
 eclipse.preferences.version=1
 org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
 org.eclipse.debug.ui.consoleBackground=64,64,64
