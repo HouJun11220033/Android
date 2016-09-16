@@ -34,7 +34,7 @@ public class MyAdapter extends SimpleAdapter {
 		System.out.println("positon---->" + position);
 
 		if (result != null) {
-			inflater.inflate(R.layout.user1, null);
+			inflater.inflate(R.layout.user, null);
 		}
 		return result;
 	}

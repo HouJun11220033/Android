@@ -21,7 +21,7 @@ public class MainActivity extends ListActivity {
 		HashMap<String, String> map3 = new HashMap<String, String>();
 		map1.put("user_name", "zhangsan");
 		map1.put("user_ip", "192.168.0.1");
-		map2.put("user_name", "zhangsan");
+		map2.put("user_name", "houjun");
 		map2.put("user_ip", "192.168.0.2");
 		map3.put("user_name", "wangwu");
 		map3.put("user_ip", "192.168.0.3");
@@ -29,7 +29,7 @@ public class MainActivity extends ListActivity {
 		list.add(map2);
 		list.add(map3);
 		MyAdapter listAdapter = new MyAdapter(this, list, R.layout.user,
-				new String[] { "user_name", "user_ip" }, new int[] { R.id.user_name, R.id.user_ip });
+				new String[] { "user_name", "user_ip" }, new int[] { R.id.username, R.id.user_ip });
 
 		// Provide the cursor for the list view.
 		setListAdapter(listAdapter);
