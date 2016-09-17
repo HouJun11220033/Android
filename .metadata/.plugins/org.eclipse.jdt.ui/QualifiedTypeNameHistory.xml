@@ -27,11 +27,15 @@
 <fullyQualifiedTypeName name="com.example.MyAdapter"/>
 <fullyQualifiedTypeName name="com.example.R.layout"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="android.widget.ProgressBar"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.entity.EntitySerializer"/>
+<fullyQualifiedTypeName name="android.widget.ProgressBar"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.example.R.id"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="org.apache.http.impl.entity.EntitySerializer"/>
 <fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="android.os.Bundle"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="android.os.Message"/>
 </qualifiedTypeNameHistroy>

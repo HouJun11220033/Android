@@ -8,8 +8,8 @@
 	</section>
 	<section name="PreferencesExportWizard">
 		<item value="C:\Users\Administrator\Desktop\Eclipse_Settings.epf" key=""/>
-		<item value="true" key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID"/>
 		<item value="true" key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID"/>
+		<item value="true" key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID"/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="C:\Users\Administrator\Desktop\Eclipse_Settings.epf"/>
 		</list>
@@ -24,15 +24,15 @@
 			<item value="git"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.egit.ui.StagingView"/>
+			<item value="org.eclipse.egit.ui.RepositoriesView"/>
 		</list>
 		<list key="textEntries">
 			<item value="1"/>
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="19" key="DIALOG_Y_ORIGIN"/>
-		<item value="222" key="DIALOG_X_ORIGIN"/>
+		<item value="70" key="DIALOG_Y_ORIGIN"/>
+		<item value="332" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
 		<item value="com.android.ide.eclipse.adt.project.NewProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
