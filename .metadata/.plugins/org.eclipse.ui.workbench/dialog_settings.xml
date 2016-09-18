@@ -8,9 +8,10 @@
 	</section>
 	<section name="PreferencesExportWizard">
 		<item value="C:\Users\Administrator\Desktop\Eclipse_Settings.epf" key=""/>
-		<item value="true" key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID"/>
 		<item value="true" key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID"/>
+		<item value="true" key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID"/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="E:\Android工具\Eclipse_Settings.epf"/>
 			<item value="C:\Users\Administrator\Desktop\Eclipse_Settings.epf"/>
 		</list>
 	</section>
