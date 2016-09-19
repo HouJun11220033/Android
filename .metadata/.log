@@ -10015,3 +10015,35 @@ java.lang.IllegalArgumentException: Widget has the wrong parent
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2016-09-19 09:35:08.964
 !MESSAGE Failed to load properties file for project 'HandlerText1'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2016-09-19 10:15:12.743
+!MESSAGE Could not read Manifest data
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: Resource '/HandlerText1/AndroidManifest.xml' does not exist.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.eclipse.adt.internal.editors.manifest.ManifestInfo.sync(ManifestInfo.java:339)
+	at com.android.ide.eclipse.adt.internal.editors.manifest.ManifestInfo.getMinSdkVersion(ManifestInfo.java:544)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launch(AndroidLaunchController.java:335)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.doLaunch(LaunchConfigDelegate.java:330)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:246)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/HandlerText1/AndroidManifest.xml' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:267)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:260)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 10 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2016-09-19 10:36:56.090
+!MESSAGE Failed to load properties file for project 'sqlite'
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2016-09-19 10:50:50.835
+!MESSAGE activity_main.xml: Couldn't resolve resource @string/hello
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2016-09-19 10:51:17.981
+!MESSAGE activity_main.xml: Couldn't resolve resource @string/hello

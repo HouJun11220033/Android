@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -41,7 +42,7 @@ public class MyHandlerActivity extends Activity {
 
 		@Override
 		public void handleMessage(Message msg) {
-			// Log.d("MyHandler", "handleMessage...");
+			Log.d("MyHandler", "handleMessage...");
 
 			super.handleMessage(msg);
 			Bundle bundle = msg.getData();
@@ -56,21 +57,22 @@ public class MyHandlerActivity extends Activity {
 	}
 
 	class Mythread extends Thread {
+		MyHandler myHandler = new MyHandler();
 
 		public void run() {
 			try {
 
 				Thread.sleep(1000);
-				System.out.println("!!!");
+				// System.out.println("!!!");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			// Log.d("thread...", "MyThread....");
+			Log.d("thread...", "MyThread....");
 			Message message = new Message();
 			Bundle bundle = new Bundle();
 			bundle.putString("color", "my");
 			message.setData(bundle);
-			MyHandlerActivity.this.myHandler.sendMessage(message);
+			myHandler.sendMessage(message);
 
 		}
 
