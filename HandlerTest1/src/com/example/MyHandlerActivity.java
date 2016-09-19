@@ -7,20 +7,23 @@ import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MyHandlerActivity extends Activity {
 	TextView textView = null;
 	Button button = null;
 	MyHandler myHandler;
+	EditText editText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		TextView textView = (TextView) findViewById(R.id.testHandler1);
-		Button button = (Button) findViewById(R.id.testHandler2);
+		textView = (TextView) findViewById(R.id.testHandler1);
+		button = (Button) findViewById(R.id.testHandler2);
+		editText = (EditText) findViewById(R.id.testHandler3);
 		button.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -43,7 +46,10 @@ public class MyHandlerActivity extends Activity {
 			super.handleMessage(msg);
 			Bundle bundle = msg.getData();
 			String color = bundle.getString("color");
+			editText.setText(color);
+
 			button.setText(color);
+			textView.setText(color);
 
 		}
 
