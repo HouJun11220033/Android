@@ -9,7 +9,6 @@ import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.XMLReader;
 
 import com.download.HttpDownloader;
-import com.example.mp3player.R;
 import com.model.Mp3Info;
 import com.xml.Mp3ListContentHandler;
 

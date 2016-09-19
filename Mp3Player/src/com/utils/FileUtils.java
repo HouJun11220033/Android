@@ -4,9 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.nio.channels.FileLockInterruptionException;
 
 import android.os.Environment;
 
@@ -18,7 +16,7 @@ public class FileUtils {
 
 	}
 
-	// ´´½¨ÎÄ¼þ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 	public File createFileInSDCard(String fileName, String dir) throws IOException {
 		File file = new File(SDCardRoot + dir + File.separator + fileName);
 		file.createNewFile();
@@ -26,7 +24,7 @@ public class FileUtils {
 
 	}
 
-	// ´´½¨Ä¿Â¼
+	// ï¿½ï¿½ï¿½ï¿½Ä¿Â¼
 	public File createSDDir(String dir) {
 		File dirFile = new File(SDCardRoot + dir + File.separator);
 		System.out.println(dirFile.mkdirs());
@@ -35,7 +33,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * ÅÐ¶ÏSD¿¨ÉÏµÄÎÄ¼þ¼ÐÊÇ·ñ´æÔÚ
+	 * ï¿½Ð¶ï¿½SDï¿½ï¿½ï¿½Ïµï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 	 */
 	public boolean isFileExist(String fileName, String path) {
 		File file = new File(SDCardRoot + path + File.separator + fileName);
@@ -43,25 +41,25 @@ public class FileUtils {
 	}
 
 	/**
-	 * ½«Ò»¸öInputStreamÀïÃæµÄÊý¾ÝÐ´Èëµ½SD¿¨ÖÐ
+	 * ï¿½ï¿½Ò»ï¿½ï¿½InputStreamï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ëµ½SDï¿½ï¿½ï¿½ï¿½
 	 */
 	public File write2SDFromInput(String path, String fileName, InputStream input) {
 		File file = null;
 		OutputStream outputStream = null;
 		try {
 			createSDDir(path);
-			// ´´½¨¿ÕÎÄ¼þ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 
 			file = createFileInSDCard(fileName, path);
-			// Õâ¸öoutputStreamÊÇÊôÓÚÎÄ¼þÄÃµ½ÊäÈëÁ÷
+			// ï¿½ï¿½ï¿½outputStreamï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			outputStream = new FileOutputStream(file);
 
 			byte buffer[] = new byte[4 * 1024];
 			int temp;
-			// ´ÓÊäÈëÁ÷ÀïÃæ¶ÁÈ¡
-			// Êä³öÀïÃæÐ´
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´
 			while ((temp = input.read(buffer)) != -1) {
-				// Êä³öÁ÷Ã»ÓÐread·½·¨
+				// ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½readï¿½ï¿½ï¿½ï¿½
 				outputStream.write(buffer, 0, temp);
 			}
 		} catch (Exception e) {

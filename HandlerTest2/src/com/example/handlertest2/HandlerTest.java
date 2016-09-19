@@ -13,21 +13,25 @@ public class HandlerTest extends Activity {
 		// handler.post(r);
 		setContentView(R.layout.main);
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(100);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		System.out.println("a--->" + System.currentTimeMillis());
-		// Thread t = new Thread(r) ;
-		// t.start();
+		// 把线程r放到线程t里面
+
 		System.out.println("activity--->" + Thread.currentThread().getId());
 		System.out.println("activityname--->" + Thread.currentThread().getName());
+		Thread t = new Thread(r);
+		t.start();
+
 	}
 
+	// 定义一个线程r
 	Thread r = new Thread() {
 		@Override
 		public void start() {
-			System.out.println("start---------");
+			System.out.println("---------start---------");
 			super.start();
 		}
 
@@ -38,7 +42,7 @@ public class HandlerTest extends Activity {
 			System.out.println("handler--->" + Thread.currentThread().getId());
 			System.out.println("handlername--->" + Thread.currentThread().getName());
 			try {
-				Thread.sleep(10000);
+				Thread.sleep(1000);
 				System.out.println("r2---?" + System.currentTimeMillis());
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block

@@ -2,12 +2,11 @@ package com.xml;
 
 import java.util.List;
 
-import com.model.Mp3Info;
-
-import org.apache.http.impl.client.EntityEnclosingRequestWrapper;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+
+import com.model.Mp3Info;
 
 public class Mp3ListContentHandler extends DefaultHandler {
 	private List<Mp3Info> infos = null;
@@ -30,7 +29,7 @@ public class Mp3ListContentHandler extends DefaultHandler {
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		String temp = new String(ch, start, length);
-		//Ò»ÐÐÒ»ÐÐ½âÎö
+		// Ò»ï¿½ï¿½Ò»ï¿½Ð½ï¿½ï¿½ï¿½
 		if (tagName.equals("id")) {
 			mp3Info.setId(temp);
 		} else if (tagName.equals("mp3.name")) {
@@ -67,11 +66,12 @@ public class Mp3ListContentHandler extends DefaultHandler {
 	}
 
 	@Override
-	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+	public void startElement(String uri, String localName, String qName, Attributes attributes)
+			throws SAXException {
 		// TODO Auto-generated method stub
-		//¼ÇÂ¼½ÚµãÃû
+		// ï¿½ï¿½Â¼ï¿½Úµï¿½ï¿½ï¿½
 		this.tagName = localName;
-		// ¸ù±êÇ©
+		// ï¿½ï¿½ï¿½Ç©
 		if (tagName.equals("resource")) {
 			mp3Info = new Mp3Info();
 		}

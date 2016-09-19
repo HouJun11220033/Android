@@ -8,7 +8,7 @@ import java.net.URL;
 public class HttpDownloader {
 	public String download(String urlStr) {
 		StringBuffer sb = new StringBuffer();
-		// Ã¿Ò»ÐÐµÄÊý¾Ý
+		// Ã¿Ò»ï¿½Ðµï¿½ï¿½ï¿½ï¿½
 		String line = null;
 		BufferedReader bufferedReader = null;
 		try {
