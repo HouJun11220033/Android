@@ -70,6 +70,7 @@ public class SQLiteActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			ContentValues values = new ContentValues();
+
 			values.put("id", 1);
 			values.put("name", "HouJun");
 			// 先创建这个工具
