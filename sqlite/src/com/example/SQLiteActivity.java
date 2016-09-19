@@ -4,6 +4,7 @@ import com.example.db.DatabaseHelper;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -33,10 +34,12 @@ public class SQLiteActivity extends Activity {
 		queryButton.setOnClickListener(new QueryListener());
 	}
 
+	// 创建数据库
 	class CreateListener implements OnClickListener {
 
 		@Override
 		public void onClick(View v) {
+
 			DatabaseHelper dbHelper = new DatabaseHelper(SQLiteActivity.this, "test_SQLite");
 			SQLiteDatabase database = dbHelper.getReadableDatabase();
 			// db.create(factory);
@@ -44,13 +47,15 @@ public class SQLiteActivity extends Activity {
 		}
 
 	}
+	// 更新
 
 	class UpdateListener implements OnClickListener {
 
 		@Override
 		public void onClick(View v) {
-			DatabaseHelper databaseHelper = new DatabaseHelper(SQLiteActivity.this, "test_SQLite", 2);
+			DatabaseHelper databaseHelper = new DatabaseHelper(SQLiteActivity.this, "test_mars_db", 2);
 			SQLiteDatabase database = databaseHelper.getReadableDatabase();
+			System.out.println("UpdateListener");
 
 		}
 
@@ -60,6 +65,12 @@ public class SQLiteActivity extends Activity {
 
 		@Override
 		public void onClick(View v) {
+			DatabaseHelper databaseHelper = new DatabaseHelper(SQLiteActivity.this, "test_mars_db", 2);
+			SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
+			ContentValues values = new ContentValues();
+			values.put("name", "zhangsanfeng");
+			sqLiteDatabase.update("user", values, "id=?", new String[] { "1" });
+			System.out.println("UpdateRecordListener");
 
 		}
 
@@ -89,7 +100,13 @@ public class SQLiteActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			DatabaseHelper databaseHelper = new DatabaseHelper(SQLiteActivity.this, "test_mars_db", 2);
-			SQLiteDatabase database = databaseHelper.getReadableDatabase();
+			SQLiteDatabase sqLiteDatabase = databaseHelper.getReadableDatabase();
+			Cursor cursor = sqLiteDatabase.query("user", new String[] { "id", "name" }, "id=?",
+					new String[] { "1" }, null, null, null);
+			while (cursor.moveToNext()) {
+				String name = cursor.getString(cursor.getColumnIndex("name"));
+				System.out.println("query---->" + name);
+			}
 
 		}
 
