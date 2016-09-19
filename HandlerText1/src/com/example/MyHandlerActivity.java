@@ -3,12 +3,14 @@ package com.example;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
-import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MyHandlerActivity extends Activity {
+	TextView textView = null;
 	Button button = null;
 	MyHandler myHandler;
 
@@ -17,39 +19,47 @@ public class MyHandlerActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		button = (Button) findViewById(R.id.testHandler);
+		TextView textView = (TextView) findViewById(R.id.testHandler1);
+		Button button = (Button) findViewById(R.id.testHandler2);
+		button.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				myHandler = new MyHandler();
+				Mythread mythread = new Mythread();
+				mythread.start();
+
+			}
+		});
 
 	}
 
 	class MyHandler extends Handler {
-		public MyHandler() {
-		}
-
-		public MyHandler(Looper L) {
-			super(L);
-		}
 
 		@Override
 		public void handleMessage(Message msg) {
-			Log.d("MyHandler", "handleMessage...");
+			// Log.d("MyHandler", "handleMessage...");
 
 			super.handleMessage(msg);
 			Bundle bundle = msg.getData();
 			String color = bundle.getString("color");
-			MyHandlerActivity.this.button.setText(color);
+			button.setText(color);
+
 		}
 
 	}
 
-	class Mythread implements Runnable {
+	class Mythread extends Thread {
+
 		public void run() {
 			try {
+
 				Thread.sleep(1000);
 				System.out.println("!!!");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			Log.d("thread...", "MyThread....");
+			// Log.d("thread...", "MyThread....");
 			Message message = new Message();
 			Bundle bundle = new Bundle();
 			bundle.putString("color", "my");
