@@ -1,6 +1,7 @@
-package com.example;
+package com.cp;
 
-import com.example.FirstProviderMetaData.UserTableMetaData;
+import com.cp.FirstProviderMetaData.UserTableMetaData;
+import com.example.R;
 
 import android.app.Activity;
 import android.content.ContentValues;
