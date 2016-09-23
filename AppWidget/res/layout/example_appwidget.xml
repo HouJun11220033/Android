@@ -15,6 +15,12 @@
         android:layout_height="wrap_content"
         android:text="firstWidgetText" />
 
+    <ImageView
+        android:id="@+id/imageId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/xiao" />
+
     <Button
         android:id="@+id/widgetButton"
         android:layout_width="fill_parent"
