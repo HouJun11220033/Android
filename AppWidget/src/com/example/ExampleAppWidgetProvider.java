@@ -8,27 +8,48 @@ import android.content.Intent;
 import android.widget.RemoteViews;
 
 public class ExampleAppWidgetProvider extends AppWidgetProvider {
+	private static final String UPDATE_ACTION = "com.example.UPDATE_APP_WIDGET";
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
 
 		super.onReceive(context, intent);
+		String action = intent.getAction();
+		if (UPDATE_ACTION.equals(action)) {
+
+			System.out.println("onReceive---->" + UPDATE_ACTION);
+		}
 	}
 
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-		System.out.println("------>onUpdate");
-		for (int i = 0; i < appWidgetIds.length; i++) {
-			System.out.println(appWidgetIds[i]);
-			Intent intent = new Intent(context, TargetActivity.class);
-			PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-			RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.example_appwidget);
-			remoteViews.setOnClickPendingIntent(R.id.widgetButton, pendingIntent);
-			appWidgetManager.updateAppWidget(appWidgetIds[i], remoteViews);
 
-		}
+		// Intent intent = new Intent(context, TargetActivity.class);
+		Intent intent = new Intent();
+		intent.setAction(UPDATE_ACTION);
+		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+		PendingIntent pendingIntent2 = PendingIntent.getActivity(context, 0, intent, 0);
+		RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.example_appwidget);
+		// remoteViews.setOnClickPendingIntent(R.id.widgetButton,
+		// pendingIntent2);
+		remoteViews.setOnClickPendingIntent(R.id.widgetButton, pendingIntent);
 
-		super.onUpdate(context, appWidgetManager, appWidgetIds);
+		appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
+		// System.out.println("------>onUpdate");
+		// for (int i = 0; i < appWidgetIds.length; i++) {
+		// System.out.println(appWidgetIds[i]);
+		// Intent intent = new Intent(context, TargetActivity.class);
+		// PendingIntent pendingIntent = PendingIntent.getActivity(context, 0,
+		// intent, 0);
+		// RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
+		// R.layout.example_appwidget);
+		// remoteViews.setOnClickPendingIntent(R.id.widgetButton,
+		// pendingIntent);
+		// appWidgetManager.updateAppWidget(appWidgetIds[i], remoteViews);
+		//
+		// }
+
+		// super.onUpdate(context, appWidgetManager, appWidgetIds);
 	}
 
 	@Override
