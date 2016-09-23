@@ -26,6 +26,9 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
 
 			System.out.println("onReceive---->" + UPDATE_ACTION);
 		} else {
+			// 初始化时调用！！！
+
+			System.out.println("[Super!!!]onReceive---->" + UPDATE_ACTION);
 
 			super.onReceive(context, intent);
 		}
