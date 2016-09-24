@@ -2,6 +2,7 @@ package com.example;
 
 import java.io.StringReader;
 
+import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
 public class JsonUtils {
@@ -11,6 +12,7 @@ public class JsonUtils {
 			// 开始解析数组
 			jsonReader.beginArray();
 			while (jsonReader.hasNext()) {
+				// 开始解析对象
 				jsonReader.beginObject();
 				while (jsonReader.hasNext()) {
 					String tagName = jsonReader.nextName();
@@ -29,6 +31,15 @@ public class JsonUtils {
 			e.printStackTrace();
 		}
 
+	}
+
+	public void parseUserFromJson(String jsonData) {
+		Gson gson = new Gson();
+		User user = gson.fromJson(jsonData, User.class);
+
+		System.out.println("name--->" + user.getName());
+
+		System.out.println("age--->" + user.getAge());
 	}
 
 }
