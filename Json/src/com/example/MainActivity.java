@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-	private String jsonData = "{\"name\":\"Michael\",\"age\":20}";
+	private String jsonData = "[{\"name\":\"Michael\",\"age\":20},{\"name\":\"Mike\",\"age\":21}]";
 	private Button button;
 
 	@Override
