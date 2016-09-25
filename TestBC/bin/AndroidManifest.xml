@@ -15,7 +15,7 @@
 		</activity>
 		<receiver android:name=".TestReceiver">
 			<intent-filter>
-				<action android:name="android.intent.action.PICK" />
+				<action android:name="android.intent.action.EDIT" />
 
 			</intent-filter>
 		</receiver>
