@@ -1,5 +1,6 @@
 package com.mobilesafe.activity;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -10,6 +11,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.example.R;
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.mobilesafe.utils.StreamUtil;
 
 import android.app.Activity;
@@ -21,7 +26,9 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -92,6 +99,52 @@ public class SplashActivity extends Activity {
 		// 他么的！！！忘了调用show方法！！！
 		builder.show();
 
+	}
+
+	protected void downloadApk() {
+		if (Environment.getExternalStorageDirectory().equals(Environment.MEDIA_MOUNTED)) {
+			String path = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator
+					+ "mobilesafe.apk";
+			HttpUtils httpUtils = new HttpUtils();
+			httpUtils.download(mDownloadUrl, path, new RequestCallBack<File>() {
+
+				@Override
+				public void onSuccess(ResponseInfo<File> responseInfo) {
+					Log.i(tag, "下载成功");
+					File file = responseInfo.result;
+					installApk(file);
+
+				}
+
+				@Override
+				public void onFailure(HttpException arg0, String arg1) {
+					Log.i(tag, "下载失败");
+
+				}
+
+				@Override
+				public void onStart() {
+					Log.i(tag, "刚刚开始下载");
+				}
+
+				@Override
+				public void onLoading(long total, long current, boolean isUpLoading) {
+					Log.i(tag, "下载中。。。。。");
+					Log.i(tag, "total=" + total);
+					Log.i(tag, "current=" + current);
+					super.onLoading(total, current, isUpLoading);
+				}
+
+			});
+
+		}
+	}
+
+	protected void installApk(File file) {
+		Intent intent = new Intent("android.intent.action.VIEW");
+		intent.addCategory("android.intent.catagory.DEFAULT");
+		intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+		startActivityForResult(intent, 0);
 	}
 
 	protected void enterHome() {
