@@ -147,6 +147,13 @@ public class SplashActivity extends Activity {
 		startActivityForResult(intent, 0);
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		enterHome();
+
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+
 	protected void enterHome() {
 		Intent intent = new Intent(this, HomeActivity.class);
 		startActivity(intent);
